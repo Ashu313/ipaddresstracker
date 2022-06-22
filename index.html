@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="index.css">
+ 
+  
+    <title>Ip address tracker</title>
+</head>
+<body>
+  
+
+   <div id="loader" class="center"></div>
+    <header class="ip1">
+   
+   <h1 class="color">Ip Address Tracker</h1>
+   <form id="form">
+    <input type="text" class="novalidate" placeholder="search for any ip address or domain" id="input_form" required="true">
+       <button   id="submit1" ><svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg>
+   
+       </button>
+   </form> 
+</header>
+  
+   
+   <div class="alldetails">
+     
+       <div class="ipaddress" >
+         <p>IP ADDRESS</p>
+         <h3 id="ip"></h3>
+      
+     
+          </div>
+
+       <div class="location">
+        <p>LOCATION</p>
+        <h3 id="location1"></h3>
+     
+      </div>
+
+       
+       <div class="timezone1">
+        <p>TIMEZONE</p>
+        <h3 id="timezone"></h3>
+    
+    </div>
+      
+       <div class="isp1">
+        <p>ISP</p>
+        <h3 id="isp"></h3>
+     
+   </div>
+</div>
+  
+
+  
+      <div id="map">map</div>
+     </div>
+ 
+
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+crossorigin=""></script>
+
+<script>
+   document.onreadystatechange = function() {
+    if (document.readyState !== "complete") {
+        document.querySelector("body").style.visibility = "hidden";
+        document.querySelector("#loader").style.visibility = "visible";
+    } else {
+        document.querySelector("#loader").style.display = "none";
+        document.querySelector("body").style.visibility = "visible";
+    }
+}
+</script>
+<script src="/network.js"></script>
+</body>
+
+</html>
